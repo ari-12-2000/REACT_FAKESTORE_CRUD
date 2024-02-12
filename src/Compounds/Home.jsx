@@ -37,6 +37,7 @@ const Home = () => {
   }
 
   const handleSort = async (order) => {
+    setIsLoading(true);
     let response;
     try {
       if (order == "desc")
@@ -46,6 +47,8 @@ const Home = () => {
       else response = await axios.get("https://fakestoreapi.com/products");
     } catch (error) {
       console.error("Error sorting in descending order:", error);
+    }finally {
+      setIsLoading(false);
     }
     setProducts(response.data);
   };
