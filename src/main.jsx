@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import App from "./Compounds/App";
+import App from "./App";
 import Home from "./Compounds/Home";
 import Login from "./Compounds/Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
